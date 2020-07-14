@@ -145,4 +145,5 @@ test("updation of todo item", async () => {
   await act(() => promise());
   const li = queryByRole("listitem");
   expect(li).toHaveTextContent("Proof of Concept");
+  expect(store.todos[0]).toEqual(db.data);
 });
